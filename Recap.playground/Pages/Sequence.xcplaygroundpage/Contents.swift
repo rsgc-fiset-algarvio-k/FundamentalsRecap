@@ -27,9 +27,28 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 500, height: 400)
 
-// Replace this comment and add your code below 
+canvas.drawShapesWithFill = true
+canvas.drawShapesWithBorders = false
+// The Circles
+canvas.fillColor = Color(hue: 1, saturation: 100, brightness: 100, alpha: 75)
+canvas.drawEllipse(centreX: 75, centreY: 150, width: 150, height: 150)
 
+// The yellow rectangle
+canvas.fillColor = Color(hue: 50, saturation: 100, brightness: 100, alpha: 75)
+canvas.drawRoundedRectangle(centreX: 300, centreY: 200, width: 100, height: 150)
 
+// The blue rectangle
+canvas.lineColor = Color(hue: 225, saturation: 100, brightness: 100, alpha: 75)
+canvas.drawLine(fromX: 200, fromY: 0, toX: 200, toY: 400, lineWidth: 150)
+
+// The triangle
+canvas.fillColor = Color(hue: 130, saturation: 100, brightness: 100, alpha: 75)
+var points : [NSPoint] = []
+points.append(NSPoint(x: 300, y: 300))
+points.append(NSPoint(x: 500, y: 300))
+points.append(NSPoint(x: 400, y: 100))
+
+canvas.drawCustomShape(with: points)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
