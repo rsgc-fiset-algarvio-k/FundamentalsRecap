@@ -52,9 +52,14 @@ for x in stride(from: 40, through: 520, by: 80){
     canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
     canvas.drawEllipse(centreX: x - 40, centreY: y + 80, width: 30, height: 30)
     canvas.drawEllipse(centreX: x - 40, centreY: y + 160, width: 30, height: 30)
+// Very Small White Circles
+    canvas.fillColor = Color.white
+    canvas.drawEllipse(centreX: x, centreY: y + 40, width: 10, height: 10)
+    canvas.drawEllipse(centreX: x, centreY: y + 200, width: 10, height: 10)
+    canvas.drawEllipse(centreX: x - 40, centreY: y + 80, width: 10, height: 10)
+    canvas.drawEllipse(centreX: x - 40, centreY: y + 160, width: 10, height: 10)
     }
 }
-
 
 /*:
  ## Template code
