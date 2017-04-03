@@ -25,9 +25,36 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 400)
+let canvas = Canvas(width: 520, height: 480)
 
-// Replace this comment and add your code below
+for x in stride(from: 40, through: 520, by: 80){
+    for y in stride(from: 0, through: 240, by: 240){
+        canvas.drawShapesWithBorders = false
+// Bigger Brown Circles
+    canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: y + 40, width: 70, height: 70)
+    canvas.drawEllipse(centreX: x, centreY: y + 200, width: 70, height: 70)
+// Bigger Yellow Circles
+    canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+    canvas.drawEllipse(centreX: x - 40, centreY: y + 80, width: 70, height: 70)
+    canvas.drawEllipse(centreX: x - 40, centreY: y + 160, width: 70, height: 70)
+// Orange Circles
+    canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: y + 40, width: 50, height: 50)
+    canvas.drawEllipse(centreX: x, centreY: y + 200, width: 50, height: 50)
+    canvas.drawEllipse(centreX: x - 40, centreY: y + 80, width: 50, height: 50)
+    canvas.drawEllipse(centreX: x - 40, centreY: y + 160, width: 50, height: 50)
+// Smaller Yellow Circles
+    canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: y + 40, width: 30, height: 30)
+    canvas.drawEllipse(centreX: x, centreY: y + 200, width: 30, height: 30)
+// Smaller Brown Circles
+    canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+    canvas.drawEllipse(centreX: x - 40, centreY: y + 80, width: 30, height: 30)
+    canvas.drawEllipse(centreX: x - 40, centreY: y + 160, width: 30, height: 30)
+    }
+}
+
 
 /*:
  ## Template code
