@@ -60,7 +60,33 @@ for x in stride(from: 40, through: 520, by: 80){
     canvas.drawEllipse(centreX: x - 40, centreY: y + 160, width: 10, height: 10)
     }
 }
+// The White Line
+for x in stride(from: 0, through: 520, by: 40) {
+    for y in stride(from: 45, through: 405, by: 120) {
+    canvas.lineColor = Color.white
+    canvas.defaultLineWidth = 10
+    canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 30)
+   
+    }
+}
 
+// The Brown, Yellow and Orange other lines
+for x in stride(from: 0, through: 520, by: 80) {
+    for y in stride(from: 0, through: 480, by: 120) {
+// Brown
+    canvas.lineColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+    canvas.drawLine(fromX: x + 10, fromY: y + 45, toX: x + 10, toY: y + 75)
+    canvas.drawLine(fromX: x + 70, fromY: y + 45, toX: x + 70, toY: y + 75)
+// Orange
+    canvas.lineColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+    canvas.drawLine(fromX: x + 20, fromY: y + 45, toX: x + 20, toY: y + 75)
+    canvas.drawLine(fromX: x + 60, fromY: y + 45, toX: x + 60, toY: y + 75)
+// Yellow
+    canvas.lineColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+    canvas.drawLine(fromX: x + 30, fromY: y + 45, toX: x + 30, toY: y + 75)
+    canvas.drawLine(fromX: x + 50, fromY: y + 45, toX: x + 50, toY: y + 75)
+    }
+}
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
